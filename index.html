@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redirect to Android or iOS</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// detect if user is using an Android device
+		var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+		
+		// detect if user is using an iOS device
+		var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+		
+		// redirect the user to the appropriate app store page
+		if (isAndroid) {
+			window.location.href = "https://play.google.com/store/apps/details?id=app.onesixthreefive";
+		} else if (isiOS) {
+			window.location.href = "https://apps.apple.com/us/app/1635-no-more-anxiety-stress/id6444877108";
+		}
+	</script>
+
+</body>
+</html>
